@@ -1,0 +1,8 @@
+pywatchman==2.0.0
+wheel
+requests
+redis
+celery
+django-cors-headers
+pytest 
+pytest-django
