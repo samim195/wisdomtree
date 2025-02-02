@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { fetchHistoricalData } from "../api";
+import "./HistoricalData.css"; // Make sure to import the CSS file
 
 const HistoricalData = ({ ticker }) => {
   const [history, setHistory] = useState([]);
 
-  console.log(ticker)
   useEffect(() => {
     fetchHistoricalData(ticker).then((data) => setHistory(data));
   }, [ticker]);
 
   return (
-    <div>
+    <div className="historical-data-container">
       <h2>Historical Data for {ticker}</h2>
-      <table border="1">
+      <table className="historical-data-table">
         <thead>
           <tr>
             <th>Timestamp</th>
@@ -25,7 +25,7 @@ const HistoricalData = ({ ticker }) => {
         <tbody>
           {history.map((row) => (
             <tr key={row.timestamp}>
-              <td>{row.timestamp}</td>
+              <td>{new Date(row.timestamp).toLocaleString()}</td>
               <td>{row.open}</td>
               <td>{row.high}</td>
               <td>{row.low}</td>
