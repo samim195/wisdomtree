@@ -24,12 +24,12 @@ const HistoricalData = ({ ticker }) => {
         </thead>
         <tbody>
           {history.map((row) => (
-            <tr key={row.timestamp}>
+            <tr key={row.id}>
               <td>{new Date(row.timestamp).toLocaleString()}</td>
-              <td>{row.open}</td>
-              <td>{row.high}</td>
-              <td>{row.low}</td>
-              <td>{row.close}</td>
+              <td>{row.open_price}</td>
+              <td>{row.high_price}</td>
+              <td>{row.low_price}</td>
+              <td>{row.close_price}</td>
             </tr>
           ))}
         </tbody>
