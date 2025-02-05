@@ -17,7 +17,7 @@ This project is a full-stack web application designed to track cryptocurrency pr
 - **Django Rest Framework (DRF)**: To build and expose RESTful APIs.
 - **Celery**: For background task handling (fetching data from Coinbase).
 - **Redis**: Message broker for Celery to handle tasks.
-- **PostgreSQL**: Relational database to store cryptocurrency and historical data.
+- **SQLLite**: Relational database to store cryptocurrency and historical data.
 
 ### Frontend
 
