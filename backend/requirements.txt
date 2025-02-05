@@ -6,3 +6,4 @@ celery
 django-cors-headers
 pytest 
 pytest-django
+djangorestframework

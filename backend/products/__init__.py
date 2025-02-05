@@ -1,1 +1,1 @@
-from backend.celery import app as celery_app
+from backend.celery_app import app as celery_app
